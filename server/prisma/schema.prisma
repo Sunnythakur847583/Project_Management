@@ -46,6 +46,8 @@ model Project {
   endDate      DateTime?
   tasks        Task[]
   projectTeams ProjectTeam[]
+
+  @@map("Project")
 }
 
 model ProjectTeam {

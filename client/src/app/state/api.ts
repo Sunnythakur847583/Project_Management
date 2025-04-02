@@ -15,15 +15,16 @@ export enum Priority {
   Low = "Low",
   Backlog = "Backlog",
 }
+
 export enum Status {
-  ToDo = "TODO",
-  WorkInProgress = "Work in Progress",
+  ToDo = "To Do",
+  WorkInProgress = "Work In Progress",
   UnderReview = "Under Review",
   Completed = "Completed",
 }
 
 export interface User {
-  UserI?: number;
+  userId?: number;
   username: string;
   email: string;
   profilePictureUrl?: string;
@@ -33,8 +34,8 @@ export interface User {
 
 export interface Attachment {
   id: number;
+  fileURL: string;
   fileName: string;
-  fileUrl: string;
   taskId: number;
   uploadedById: number;
 }
@@ -52,6 +53,7 @@ export interface Task {
   projectId: number;
   authorUserId?: number;
   assignedUserId?: number;
+
   author?: User;
   assignee?: User;
   comments?: Comment[];

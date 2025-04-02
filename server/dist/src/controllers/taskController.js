@@ -17,14 +17,14 @@ const getTasks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const tasks = yield prisma.task.findMany({
             where: {
-                projectId: Number(projectId)
+                projectId: Number(projectId),
             },
             include: {
                 author: true,
                 assignee: true,
                 comments: true,
-                attachments: true
-            }
+                attachments: true,
+            },
         });
         res.json(tasks);
     }
@@ -34,7 +34,7 @@ const getTasks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getTasks = getTasks;
 const createTask = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { title, description, status, priority, tags, startDate, dueDate, points, projectId, authorUserId, assignedUserId } = req.body;
+    const { title, description, status, priority, tags, startDate, dueDate, points, projectId, authorUserId, assignedUserId, } = req.body;
     try {
         const newTask = yield prisma.task.create({
             data: {
@@ -48,8 +48,8 @@ const createTask = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
                 points,
                 projectId,
                 authorUserId,
-                assignedUserId
-            }
+                assignedUserId,
+            },
         });
         res.status(201).json(newTask);
     }
@@ -64,11 +64,11 @@ const updateTaskStatus = (req, res) => __awaiter(void 0, void 0, void 0, functio
     try {
         const updatedtask = yield prisma.task.update({
             where: {
-                id: Number(taskId)
+                id: Number(taskId),
             },
             data: {
-                status: status
-            }
+                status: status,
+            },
         });
         res.json(updatedtask);
     }

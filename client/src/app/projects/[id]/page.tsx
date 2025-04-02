@@ -4,6 +4,7 @@ import ProjectHeader from "@/app/projects/ProjectHeader";
 import Board from "../BoardView";
 import { use } from "react";
 import List from "../ListView";
+import Timeline from "../TimelineView";
 type Props = {
   params: Promise<{ id: string }>; // ✅ params is now a Promise
 };
@@ -23,6 +24,9 @@ const Project = ({ params }: Props) => {
       )}
       {activeTab === "List" && (
         <List id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
+      )}
+      {activeTab === "Timeline" && (
+        <Timeline id={id} setIsModalNewTaskOpen={setIsModalNewTaskOpen} />
       )}
     </div>
   );

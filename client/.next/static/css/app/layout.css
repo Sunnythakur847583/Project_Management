@@ -757,6 +757,9 @@ video {
 .max-w-2xl {
   max-width: 42rem;
 }
+.max-w-full {
+  max-width: 100%;
+}
 .flex-1 {
   flex: 1 1 0%;
 }

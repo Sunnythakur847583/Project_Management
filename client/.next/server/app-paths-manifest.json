@@ -1,4 +1,6 @@
 {
-  "/timeline/page": "app/timeline/page.js",
-  "/projects/[id]/page": "app/projects/[id]/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/search/page": "app/search/page.js"
 }

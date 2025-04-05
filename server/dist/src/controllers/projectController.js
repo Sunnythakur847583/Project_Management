@@ -18,7 +18,9 @@ const getProject = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         res.json(projects);
     }
     catch (error) {
-        res.status(500).json({ error: `Failed to fetch projects: ${error.message}` });
+        res
+            .status(500)
+            .json({ error: `Failed to fetch projects: ${error.message}` });
     }
 });
 exports.getProject = getProject;
@@ -31,7 +33,7 @@ const createProject = (req, res) => __awaiter(void 0, void 0, void 0, function* 
                 description,
                 startDate,
                 endDate,
-            }
+            },
         });
         res.status(201).json(newProject);
     }

@@ -702,6 +702,9 @@ video {
   height: -moz-min-content;
   height: min-content;
 }
+.h-9 {
+  height: 2.25rem;
+}
 .min-h-\[2em\] {
   min-height: 2em;
 }
@@ -756,6 +759,9 @@ video {
 .w-min {
   width: -moz-min-content;
   width: min-content;
+}
+.w-9 {
+  width: 2.25rem;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -849,15 +855,15 @@ video {
   margin-right: calc(-6px * var(--tw-space-x-reverse));
   margin-left: calc(-6px * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;

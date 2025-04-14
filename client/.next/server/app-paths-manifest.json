@@ -1,7 +1,6 @@
 {
   "/page": "app/page.js",
   "/timeline/page": "app/timeline/page.js",
-  "/priority/high/page": "app/priority/high/page.js",
-  "/priority/low/page": "app/priority/low/page.js",
-  "/priority/backlog/page": "app/priority/backlog/page.js"
+  "/projects/[id]/page": "app/projects/[id]/page.js",
+  "/priority/urgent/page": "app/priority/urgent/page.js"
 }

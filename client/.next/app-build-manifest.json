@@ -17,11 +17,6 @@
       "static/css/app/timeline/page.css",
       "static/chunks/app/timeline/page.js"
     ],
-    "/search/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/search/page.js"
-    ],
     "/projects/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -32,26 +27,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/priority/urgent/page.js"
-    ],
-    "/priority/high/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/priority/high/page.js"
-    ],
-    "/priority/medium/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/priority/medium/page.js"
-    ],
-    "/priority/low/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/priority/low/page.js"
-    ],
-    "/priority/backlog/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/priority/backlog/page.js"
     ]
   }
 }

@@ -36,7 +36,7 @@ function deleteAllData(orderedFileNames) {
 }
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        const dataDirectory = path_1.default.join(__dirname, "seedData");
+        const dataDirectory = path_1.default.join(__dirname, "SeedData");
         const orderedFileNames = [
             "team.json",
             "project.json",

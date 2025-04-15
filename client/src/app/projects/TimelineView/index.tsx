@@ -3,6 +3,7 @@ import { useGetTasksQuery } from "@/app/state/api";
 import { DisplayOption, Gantt, ViewMode } from "gantt-task-react";
 import "gantt-task-react/dist/index.css";
 import React, { useMemo, useState } from "react";
+import Project from "../[id]/page";
 
 type Props = {
   id: string;

@@ -133,7 +133,6 @@ const Task = ({ task }: TaskProps) => {
       isDragging: !!monitor.isDragging(),
     }),
   }));
-  console.log(task);
 
   const taskTagsSplit = task.tags ? task.tags.split(",") : [];
 

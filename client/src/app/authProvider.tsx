@@ -1,5 +1,5 @@
 import React from "react";
-import { Authenticator } from "@aws-amplify/ui-react";
+import { Authenticator, TextField } from "@aws-amplify/ui-react";
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
 
@@ -19,25 +19,29 @@ const formFields = {
       order: 1,
       placeholder: "Choose a username",
       label: "Username",
-      inputProps: { required: true },
+      isRequired: true,
+      type: "text",
     },
     email: {
-      order: 1,
+      order: 2,
       placeholder: "Enter your email address",
       label: "Email",
-      inputProps: { type: "email", required: true },
+      isRequired: true,
+      type: "email",
     },
     password: {
       order: 3,
       placeholder: "Enter your password",
       label: "Password",
-      inputProps: { type: "password", required: true },
+      isRequired: true,
+      type: "password",
     },
     confirm_password: {
       order: 4,
       placeholder: "Confirm your password",
       label: "Confirm Password",
-      inputProps: { type: "password", required: true },
+      isRequired: true,
+      type: "password",
     },
   },
 };
@@ -45,7 +49,27 @@ const formFields = {
 const AuthProvider = ({ children }: any) => {
   return (
     <div>
-      <Authenticator formFields={formFields}>
+      <Authenticator
+        formFields={formFields}
+        components={{
+          SignUp: {
+            FormFields() {
+              return (
+                <>
+                  <Authenticator.SignUp.FormFields />
+                  <TextField
+                    label="Full Name"
+                    name="name" // ✅ Standard attribute
+                    placeholder="Enter your full name"
+                    type="text"
+                    isRequired={true}
+                  />
+                </>
+              );
+            },
+          },
+        }}
+      >
         {({ user }: any) =>
           user ? (
             <div>{children}</div>
